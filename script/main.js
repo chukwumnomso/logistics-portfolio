@@ -314,3 +314,4 @@ async function updateMarkerByTrackingId(trackingNumber) {
 
 // updateMarkerByTrackingId(67890);
 // ////////////////////// MAP INTERGRATION END/////////////////////////////
+

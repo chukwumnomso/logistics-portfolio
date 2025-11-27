@@ -101,7 +101,6 @@ updateForm.addEventListener("submit", async (event) => {
   const weight = document.getElementById("weight").value;
   const description = document.getElementById("description").value;
 
-  // Call the update function
   await updateRecord(
     tracking_number,
     sender,

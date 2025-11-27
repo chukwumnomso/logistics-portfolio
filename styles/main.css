@@ -1234,7 +1234,7 @@ textarea {
   justify-content: center;
   height: 100vh;
   background-color: blueviolet;
-  /* display: none; */
+  display: none;
 }
 input {
   border: solid black 2px;
@@ -1260,7 +1260,7 @@ button {
 
 .update-form {
   background-color: #34ced6;
-  display: none;
+  /* display: none; */
 }
 
 .delete-form {
