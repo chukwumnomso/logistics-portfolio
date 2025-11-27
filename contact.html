@@ -6,151 +6,177 @@
     <title>swift courier</title>
     <!-- style sheet -->
     <link rel="stylesheet" href="./styles/main.css" />
-    <link rel="stylesheet" href="./styles/other.css" />
 
-    <!-- favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
     <!-- fontawesome -->
     <link
       rel="stylesheet"
       href="./fontawesome-free-6.7.2-web/fontawesome-free-6.7.2-web/css/all.css"
     />
-    <!-- <script
-      src="https://kit.fontawesome.com/3e25078c64.js"
-      crossorigin="anonymous"
-    ></script> -->
+
     <!-- =======javascript=========== -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+      defer
+    ></script>
     <script src="./script/main.js" defer></script>
+
     <!-- google fonts -->
   </head>
   <body>
-    <!-- /////////////about hero////////////////////////////// -->
-    <div class="head">
-      <div class="logo-nav">
-        <div class="logo">Swift<span>Courier</span></div>
-        <nav>
-          <ul>
-            <li>
-              <a href="index.html">Home</a>
-            </li>
-            <li>
-              <a href="about.html">About</a>
-            </li>
-            <li>
-              <a href="service.html">Service</a>
-            </li>
-            <li>
-              <a href="contact.html">Contact</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-    <div class="nav-bar" id="navBar">
-      <i class="fa-solid fa-bars"></i>
-    </div>
-    <ul id="myNav">
-      <i class="fa-solid fa-xmark" id="close"></i>
-
-      <li>
-        <a href="index.html">Home</a>
-      </li>
-      <li>
-        <a href="about.html">About</a>
-      </li>
-      <li>
-        <a href="service.html">Service</a>
-      </li>
-      <li>
-        <a href="contact.html">Contact</a>
-      </li>
-    </ul>
-    <!-- ////////////end of navbar//////////////////////////////////////// -->
-
-    <div class="contact-hero">
+    <!-- ///////////////////////////////////////////////////////////////////////
+                        START OF HEAD SECTION 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <div class="header">
       <div>
-        <h6>get in touch</h6>
-
-        <h2>reach out to</h2>
-
-        <h1>swiftcourier</h1>
+        <a href="index.html"> <span>Swift</span><span>logistics</span></a>
       </div>
+      <!-- //////////////// DESKTOP NAVBAR///////////// -->
+
+      <ul class="navbar">
+        <li><a href="index.html">home</a></li>
+        <li><a href="about.html">about</a></li>
+        <li><a href="merchant.html">merchant</a></li>
+        <li><a href="3plvendor.html">3pl vendor</a></li>
+        <li><a href="individuals.html">individuals</a></li>
+        <li>
+          <a href="contact.html">contact</a>
+        </li>
+      </ul>
+
+      <button id="nav-btn"><i class="fa-solid fa-bars"></i></button>
     </div>
 
-    <div class="contact">
-      <div class="forms">
-        <div class="heading">
-          <p>we're here to help</p>
-          <h1>contact our team for assistance</h1>
+    <!-- ///////////////// MOBILE NAVBAR//////////////////// -->
+    <nav id="in-nav">
+      <ul>
+        <li class="nav-li"><a href="index.html">home</a></li>
+        <li class="nav-li"><a href="about.html">about</a></li>
+        <li id="outer">
+          <a>services <i class="fa-solid fa-angle-down"></i></a>
+        </li>
+        <div class="inner">
+          <a href="merchant.html" class="under">For Merchants</a>
+          <a href="3plvendor.html" class="under">For 3PL vendor</a>
+          <a href="individuals.html" class="under">For Individuals</a>
         </div>
-        <form action="https://formspree.io/f/xqayoeeq" method="post">
-          <div class="form">
-            <label for="firstName">first Name</label><br />
-            <input
-              type="text"
-              id="firstName"
-              placeholder="john "
-              name="first name"
-              class="field"
-            />
-            <br />
-            <label for="lastName">Last Name</label><br />
-            <input
-              type="text"
-              id="lastName"
-              placeholder="bill"
-              name="last name"
-              class="field"
-            />
-            <br />
-            <label for="Email">Email</label><br />
-            <input
-              type="text"
-              id="firstName"
-              placeholder="eg. @mail.com"
-              name="Email"
-              class="field"
-            />
-            <br />
-            <label for="Message" class="field">Message</label><br />
-            <textarea
-              name="message"
-              id="Message"
-              cols="30"
-              rows="10"
-              class="text"
-            ></textarea
-            ><br />
-            <button type="submit" class="btn">submit</button>
+        <li class="nav-li">
+          <a href="contact.html">contact</a>
+        </li>
+        <li class="nav-li"><a href="track.html">track</a></li>
+      </ul>
+    </nav>
+
+    <!-- ///////////////////////////////////////////////////////////////////
+                          END OF HEAD SECTION 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- ///////////////////////////////////////////////////////////////////
+                          START OF CONTACT SECTION 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+    <section>
+      <div class="contact-sec">
+        <div class="contact">
+          <h1 class="heading">contact us</h1>
+          <br />
+          <p>
+            At swift Logistics, we place a strong emphasis on providing
+            exceptional customer service.
+          </p>
+          <br />
+          <p>
+            Whether you have a question about a shipment, need assistance in
+            selecting the right service, or simply want to learn more about how
+            we can help you, our team is always delighted to hear from you.
+          </p>
+          <br />
+          <p>We take pride in providing friendly and knowledgeable support.</p>
+          <br /><br /><br />
+          <div class="under-contact">
+            <div>
+              <h2 class="sub-heading">customer support</h2>
+              <br />
+              <p>
+                We understand that sometimes things don't go exactly as planned
+                and when that happens, our dedicated customer support team is
+                here to assist you.
+              </p>
+            </div>
+            <br /><br /><br />
+            <div>
+              <h2 class="sub-heading">feedback and suggestions</h2>
+              <br />
+              <p>
+                We are committed to delivering outstanding shipping solutions
+                and consistently work to enhance them. Your feedback is
+                invaluable in helping us achieve that goal.
+              </p>
+            </div>
+            <br /><br />
           </div>
-        </form>
+        </div>
+        <br /><br /><br /><br />
+        <div id="form">
+          <h1 class="heading">get in touch 24/7</h1>
+          <br />
+          <h3 class="heading"><p>we would love to hear from you!</p></h3>
+          <br /><br />
+          <form action="" method="post" onsubmit="formSubmit(event)">
+            <input
+              type="text"
+              name="first_name"
+              placeholder="fisrt name"
+              class="name"
+            />
+            <input
+              type="text"
+              name="last_name"
+              placeholder="last name"
+              class="name"
+            /><br /><br /><input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="email address"
+            /><br /><br /><input
+              type="text"
+              name="phone"
+              id="phone"
+              placeholder="phone number"
+            /><br /><br /><textarea
+              name="message"
+              id="message"
+              placeholder="how may we help you"
+              cols="30"
+              rows="8"
+            ></textarea>
+            <button type="submit" id="form-btn">submit</button>
+          </form>
+        </div>
       </div>
-      <div class="contacts">
-        <div class="lines">
-          <p>phone:</p>
-          <br />
-          +234 704 364 1466
-        </div>
-        <br />
-        <div class="lines">
-          <p>email:</p>
-          <br />
-          johnkennedychinomso@gmail.com
-        </div>
-        <br />
-        <div class="lines">
-          <p>address:</p>
-          <br />
-          umuocham road aba, abia state.
+      <div class="address-sec">
+        <div class="phone"><i class="fa-solid fa-phone yes"></i></div>
+        <div class="contact-address">
+          <div class="address">
+            <h3>phone</h3>
+            <br />
+            <h3>+234 704 364 1466</h3>
+          </div>
+          <div class="address">
+            <h3>email</h3>
+            <br />
+            <h3>chinomso@gmail.com</h3>
+          </div>
+          <div class="address">
+            <h3>address</h3>
+            <br />
+            <h3>umuocham rd. aba, abia state</h3>
+          </div>
         </div>
       </div>
-    </div>
-    <!-- //////////////////// footer/////////////////////////
-     //////////////////////////////////////////////////////// -->
+    </section>
+    <!-- /////////////////////////////////////////////////////////////////////////////END OF CONTACT SECTION///////////////////// -->
 
+    <!-- ///////////////////////////////////////////////////////////////////////////////// START OF FOOTER////////////////////// -->
     <footer class="footer">
       <div class="footer-center">
         <div class="belief">
@@ -189,12 +215,12 @@
           <h2>quick links</h2>
           <br />
 
-          <a href="#about.html">About</a>
+          <a href="about.html">About</a>
           <br /><br />
-          <a href="#contact.html">Contact</a>
+          <a href="contact.html">Contact</a>
           <br /><br />
-          <a href="#service.html">Services</a><br /><br />
-          <a href="#faq.html">FAQ</a>
+          <a href="3plvendor.html">Services</a><br /><br />
+          <a href="#html">FAQ</a>
         </div>
         <!-- //////////end of footer quicklinnks/////// -->
 
@@ -213,13 +239,10 @@
         </div>
         <i class="fa-solid fa-angle-up angle-up" id="to-top"></i>
       </div>
-
-      <!-- ///////end of footer contacts//////////////
-       ///////////////////////////////////////////// -->
-
+      <!-- ///////end of footer contacts////////////// -->
       <div class="main-footer">
         <div class="main-footer-left">
-          <p>Copyright &copy 2025 All rights reserved</p>
+          <p>Copyright &copy <span id="date"></span> All rights reserved</p>
         </div>
         <div class="main-footer-right"><p>Designed by | Chinomso</p></div>
       </div>

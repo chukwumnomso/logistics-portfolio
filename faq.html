@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/main.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+      defer
+    ></script>
+    <script src="./script/track.js" defer></script>
+  </head>
+  <body>
+    <div class="login-div">
+      <input type="text" /><button onclick="login()">ok</button>
+    </div>
+    <!--////////////// USER INSRTING FORM////////////////////////// -->
+
+    <div class="parcelform">
+      <form action="" method="post" onsubmit="createPackage(event)">
+        <input
+          type="text"
+          name="tracking_number"
+          placeholder="tracking_number"
+          class="name"
+        />
+        <input
+          type="text"
+          name="sender"
+          placeholder="sender name"
+          class="name"
+        /><br /><br />
+        <input type="text" name="from" placeholder="from" class="name" />
+        <br />
+        <br />
+        <input type="text" name="to" placeholder="to" class="name" /> <br />
+        <br /><br />
+        <input
+          type="text"
+          name="status"
+          placeholder="status"
+          class="name"
+        /><br /><br /><input
+          type="text"
+          name="current_Location"
+          placeholder="current_location"
+        /><br /><br />
+        <input
+          type="text"
+          name="reciever"
+          placeholder="reciever name"
+          class="name"
+        />
+
+        <br /><br />
+        <input type="text" name="address" placeholder="address" class="name" />
+        <br />
+        <br />
+        <label for="registered_date">registered_date</label><br />
+        <input
+          type="datetime-local"
+          name="registered_date"
+          placeholder="registered_date"
+          class="name"
+        />
+        <br />
+        <br />
+        <label for="expected_delivery">expected_delivery</label><br />
+        <input
+          type="datetime-local"
+          name="expected_delivery"
+          placeholder="delivery date"
+        /><br /><br />
+        <input
+          type="text"
+          id="weight"
+          name="weight"
+          placeholder="weight"
+          class="name"
+        />
+        <br />
+        <br />
+
+        <textarea
+          name="description"
+          placeholder="description about package"
+          cols="30"
+          rows="5"
+        ></textarea>
+        <br />
+        <input
+          type="text"
+          name="latitude"
+          placeholder="latitude for  map"
+          class="name"
+        />
+        <br />
+        <br />
+        <input
+          type="text"
+          name="longitude"
+          placeholder="longitude for  map"
+          class="name"
+        />
+        <div>
+          <button type="create">submit</button>
+          <button><a href="index.html">home</a></button>
+        </div>
+      </form>
+    </div>
+
+    <!--////////////// UPDATE FORM////////////////////////// -->
+    <div class="update-form">
+      <form action="" id="updateForm">
+        <input
+          type="text"
+          id="tracking_number"
+          name="tracking_number"
+          placeholder="tracking_number"
+          class="name"
+        />
+        <input
+          type="text"
+          id="sender"
+          name="sender"
+          placeholder="sender name"
+          class="name"
+        /><br /><br />
+        <input
+          type="text"
+          id="from"
+          name="from"
+          placeholder="from"
+          class="name"
+        />
+        <br />
+        <br />
+        <input type="text" id="to" name="to" placeholder="to" class="name" />
+        <br />
+        <br /><br />
+        <input
+          type="text"
+          id="status"
+          name="status"
+          placeholder="status"
+          class="name"
+        /><br /><br /><input
+          type="text"
+          id="current_location"
+          name="current_Location"
+          placeholder="current_Location"
+        /><br /><br />
+        <input
+          type="text"
+          id="reciever"
+          name="reciever"
+          placeholder="reciever name"
+          class="name"
+        />
+
+        <br /><br />
+        <input
+          type="text"
+          id="address"
+          name="address"
+          placeholder="address"
+          class="name"
+        />
+        <br />
+        <br />
+        <label for="registered_date">registered_date</label><br />
+        <input
+          type="datetime-local"
+          id="registered_date"
+          name="registered_date"
+          placeholder="registered_date"
+          class="name"
+        />
+        <br />
+        <br />
+        <label for="expected_delivery">expected_delivery</label><br />
+        <input
+          type="datetime-local"
+          id="expected_delivery"
+          name="expected_delivery"
+          placeholder="delivery date"
+        /><br /><br />
+        <input type="text" name="weight" placeholder="weight" class="name" />
+        <br />
+        <br />
+
+        <textarea
+          name="description"
+          id="description"
+          placeholder="description about package"
+          cols="30"
+          rows="5"
+        ></textarea>
+        <br />
+        <input
+          type="text"
+          name="latitude"
+          id="latitude"
+          placeholder="latitude for  map"
+          class="name"
+        />
+        <br />
+        <br />
+        <input
+          type="text"
+          id="longitude"
+          name="longitude"
+          placeholder="longitude for map"
+          class="name"
+        />
+        <div>
+          <button type="submit">update</button>
+          <button><a href="index.html">home</a></button>
+        </div>
+      </form>
+    </div>
+
+    <!-- ///////////////////////////////////////////////////////////// -->
+
+    <!-- //////////////////DELETING FORM -->
+    <div class="delete-form">
+      <input
+        type="text"
+        id="track-input"
+        name=""
+        placeholder="input tracking number to delete"
+        class="name"
+      />
+      <div>
+        <button type="submit" id="deleteBtn">delete</button>
+        <button><a href="index.html">home</a></button>
+      </div>
+    </div>
+    <script></script>
+  </body>
+</html>

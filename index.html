@@ -7,248 +7,234 @@
     <!-- style sheet -->
     <link rel="stylesheet" href="./styles/main.css" />
 
-    <!-- favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
     <!-- fontawesome -->
     <link
       rel="stylesheet"
       href="./fontawesome-free-6.7.2-web/fontawesome-free-6.7.2-web/css/all.css"
     />
-    <!-- <script
-      src="https://kit.fontawesome.com/3e25078c64.js"
-      crossorigin="anonymous"
-    ></script> -->
+
     <!-- =======javascript=========== -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+      defer
+    ></script>
     <script src="./script/main.js" defer></script>
+
     <!-- google fonts -->
   </head>
   <body>
-    <!-- ============hero=========
-   ============================== -->
-
-    <div class="hero">
-      <button
-        type="button"
-        name="mobile-nav-trigger"
-        class="nav-bar"
-        id="navBar"
-      >
-        <i class="fa-solid fa-bars"></i>
-      </button>
-      <div class="head">
-        <div class="logo-nav">
-          <div class="logo">Swift<span>Courier</span></div>
-          <nav>
-            <!-- ////////////// navbar/////////////////////////// -->
-            <ul>
-              <li>
-                <a href="index.html">Home</a>
-              </li>
-              <li>
-                <a href="about.html">About</a>
-              </li>
-              <li>
-                <a href="service.html">Service</a>
-              </li>
-              <li>
-                <a href="contact.html">Contact</a>
-              </li>
-            </ul>
-          </nav>
-          <!-- ////////////end of navbar//////////////////////////// -->
-        </div>
+    <!-- ///////////////////////////////////////////////////////////////////////
+                        START OF HEAD SECTION 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <div class="header">
+      <div>
+        <a href="index.html"> <span>Swift</span><span>logistics</span></a>
       </div>
+      <!-- //////////////// DESKTOP NAVBAR///////////// -->
 
-      <div class="hero-center">
-        <div class="hero-text">
-          <p>Delivering Seamless Logistics Solutions Across the Globe</p>
-        </div>
-        <div class="pr">
-          <p>
-            Your Trusted Partner in Container Haulage, Heavy-Duty Transport, Car
-            Delivery and House Moving
-          </p>
-        </div>
-        <button type="submit" class="btn" id="trackBtn">
-          <span> Track Package</span>
-        </button>
-      </div>
-      <ul id="myNav">
-        <i class="fa-solid fa-xmark" id="close"></i>
-        <!-- /////////side navbar////////////////////////////// -->
+      <ul class="navbar">
+        <li><a href="index.html">home</a></li>
+        <li><a href="about.html">about</a></li>
+        <li><a href="merchant.html">merchant</a></li>
+        <li><a href="3plvendor.html">3pl vendor</a></li>
+        <li><a href="individuals.html">individuals</a></li>
         <li>
-          <a href="index.html">Home</a>
-        </li>
-        <li>
-          <a href="about.html">About</a>
-        </li>
-        <li>
-          <a href="service.html">Service</a>
-        </li>
-        <li>
-          <a href="contact.html">Contact</a>
+          <a href="contact.html">contact</a>
         </li>
       </ul>
-      <!-- ////////end of side navbar//////////////////////////// -->
+
+      <button id="nav-btn"><i class="fa-solid fa-bars"></i></button>
     </div>
-    <!-- ====end of hero=============== -->
-    <!-- ==========about section============== -->
-    <section class="about-sec">
-      <div class="heading">
-        <h1>What we stand for</h1>
-        <br />
 
+    <!-- ///////////////// MOBILE NAVBAR//////////////////// -->
+    <nav id="in-nav">
+      <ul>
+        <li class="nav-li"><a href="index.html">home</a></li>
+        <li class="nav-li"><a href="about.html">about</a></li>
+        <li id="outer">
+          <a>services <i class="fa-solid fa-angle-down"></i></a>
+        </li>
+        <div class="inner">
+          <a href="merchant.html" class="under">For Merchants</a>
+          <a href="3plvendor.html" class="under">For 3PL vendor</a>
+          <a href="individuals.html" class="under">For Individuals</a>
+        </div>
+        <li class="nav-li">
+          <a href="contact.html">contact</a>
+        </li>
+        <li class="nav-li"><a href="track.html">track</a></li>
+      </ul>
+    </nav>
+
+    <!-- ///////////////////////////////////////////////////////////////////////
+                          END OF HEAD SECTION 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+    <!-- ///////////////////////////////////////////////////////////////////////
+                           HERO SECTION 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <div class="hero">
+      <div class="hero-center">
+        <p>local and international shipments</p>
+        <br />
         <p>
-          Our culture is defined by what we do and how we serve our brand
-          partners, customers and each other.
+          At Swift Logistics, we pride ourselves on being a trusted partner for
+          businesses and individuals seeking reliable and affordable shipping
+          solutions worldwide.
         </p>
-      </div>
-
-      <div class="about">
-        <div class="card cards">
-          <i class="fa-solid fa-truck-fast font"></i><br /><br />
-          <span>rapid delivery</span>
-          <br /><br />
-          <p>
-            Save yourself time by comparing couriers online using our swift
-            courier, quick quote tool. There is no need to spend hours looking
-            for the best parcel post prices as we can do this for you in just a
-            couple of clicks.
-          </p>
-        </div>
-        <div class="card">
-          <i class="fa-solid fa-map-location-dot font"></i><br />
-          <span>fully tracked delivery</span><br /><br />
-          <p>
-            Save yourself time by comparing couriers online using our swift
-            courier, quick quote tool. There is no need to spend hours looking
-            for the best parcel post prices as we can do this for you in just a
-            couple of clicks.
-          </p>
-        </div>
-        <div class="card">
-          <i class="fa-solid fa-ship font"></i><br />
-          <span>dropshipping support</span><br /><br />
-          <p>
-            drop shipping support expert,drop shipping sulutions that
-            facilitates your sales.
-          </p>
-        </div>
-        <div class="card cards">
-          <i class="fa-solid fa-handshake font"></i><br />
-          <span>take ownership</span><br /><br />
-          <p>
-            We take pride in a culture of high accountability to actions and
-            results. We are all drivers, not passengers, and treat each problem
-            as our own. We grow and learn from failures and successes, but
-            always own our outcomes.
-          </p>
-        </div>
-      </div>
-    </section>
-    <!-- ////////end of about//////////////////// -->
-
-    <!-- ///////////service///////////////////// -->
-
-    <section class="service-sec">
-      <div class="service-head">
-        <p>our benefit</p>
         <br />
-        <h1>why people choose us?</h1>
+        <button class="btn"><a href="track.html">track package</a></button>
       </div>
+    </div>
+    <!-- /////////////////////////////////////////////////////////////////
+                          END OF HERO SECTION
+    /////////////////////////////////////////////////////////////////////// -->
 
-      <div class="services">
-        <div class="service-center">
-          <div class="service">
-            <i class="fa-solid fa-truck-plane fonts"></i>
-            <div>
-              <h1>advanced fleet</h1>
-              <p>
-                Our modern fleet includes eco-friendly CNG-powered trucks,
-                reducing environmental impact.
-              </p>
-            </div>
-          </div>
+    <!-- /////////////////////////////////////////////////////////////////
+                             SERVICE SECTION
+    ///////////////////////////////////////////////////////////////////////// -->
 
-          <div class="service">
-            <i class="fa-solid fa-shield fonts"></i>
-            <div>
-              <h1>safety first</h1>
-              <p>
-                Our strict safety protocols ensure that your cargo and
-                belongings are handled with care and delivered securely.
-              </p>
-            </div>
-          </div>
-
-          <div class="service">
-            <i class="fa-solid fa-people-group fonts"></i>
-            <div>
-              <h1>experienced team</h1>
-              <p>
-                Over a decade of experience in logistics, with a team dedicated
-                to providing top-notch services.
-              </p>
-            </div>
-          </div>
-
-          <div class="service">
-            <i class="fa-solid fa-globe fonts"></i>
-            <div>
-              <h1>global reach</h1>
-              <p>
-                We cover all regions of the wrold, ensuring seamless logistics
-                support wherever your business takes you.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="service-img">
+    <section class="section">
+      <div class="heading"><h2>seamless delivery services</h2></div>
+      <div class="holder">
+        <div class="card">
           <div>
-            <p>swift<span>courier</span></p>
+            <i class="fa-solid fa-ship font"></i>
+            <h3>ship now</h3>
+            <p>request pickup, delivery or express drop-off</p>
+          </div>
+        </div>
+        <div class="card">
+          <div>
+            <i class="fa-solid fa-ship font"></i>
+            <h3>global shipping</h3>
+            <p>request pickup, delivery or express drop-off</p>
+          </div>
+        </div>
+        <div class="card">
+          <div>
+            <i class="fa-solid fa-book font"></i>
+            <h3>get a quick note</h3>
+            <p>request pickup, delivery or express drop-off</p>
+          </div>
+        </div>
+        <div class="card">
+          <div>
+            <i class="fa-solid fa-basket-shopping font"></i>
+            <h3>personal shopper</h3>
+            <p>request pickup, delivery or express drop-off</p>
+          </div>
+        </div>
+      </div>
+      <div class="pic-holder">
+        <div class="slideleft img"></div>
+        <div>
+          <div class="text">
+            <div>
+              <h2>cargo shipping</h2>
+              <br />
+              <p>businesses only</p>
+              <br />
+              <p>
+                Discover shipping and logistics service options from swift
+                Global Forwarding.
+              </p>
+            </div>
+            <div class="list">
+              <h3>services availaible</h3>
+              <i class="fa-solid fa-plane-arrival fonts"></i>
+              <span>air freight</span><br />
+              <i class="fa-solid fa-truck fonts"></i>
+              <span>road freight</span><br />
+              <i class="fa-solid fa-ship fonts"></i>
+              <span>ocean freight</span><br />
+              <i class="fa-solid fa-train fonts"></i> <span>rail freight</span>
+            </div>
+            <div class="btn-div">
+              <button class="list-btn">
+                <a href="about.html">explore swift global forwarding</a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pic-holder pic-holder2">
+        <div class="slideright img-1"></div>
+        <div>
+          <div class="text">
+            <div>
+              <h2>document and parcel shipping</h2>
+              <br />
+              <p>for all shippers</p>
+              <br />
+              <p>
+                Learn about swift Express – the undisputed global leader in
+                international express shipping
+              </p>
+            </div>
+            <div class="list">
+              <h3>services availaible</h3>
+              <i class="fa-solid fa-plane-arrival fonts"></i>
+              <span>next possible bussiness day</span><br />
+              <i class="fa-solid fa-location-crosshairs fonts"></i>
+              <span>flexible import/export options</span><br />
+              <i class="fa-solid fa-business-time fonts"></i>
+              <span>tailored business solutions</span><br />
+              <i class="fa-solid fa-handshake fonts"></i>
+              <span>wide variety of optional services</span>
+            </div>
+            <div class="btn-div">
+              <button class="list-btn">
+                <a href="about.html">explore swift express</a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="heading heading-2">
+        <h2>important services update</h2>
+        <br />
+        <p>Service bulletins keep you up to date with news and alerts</p>
+      </div>
+      <div class="update-holder">
+        <div class="update-card">
+          <div class="update">
+            <img
+              src="./img/male-dhl-employee-driving-electric-dhl-van.jpeg"
+              alt=""
+            />
+            <h3>sustainability</h3>
+            <br />
+            <p>
+              sustainable business begins with sustainable supply chains. We
+              proudly provide a comprehensive portfolio of emission reduced
+              logistics solutions. Find out what we have to offer, why we're
+              committed to sustainability, and how our industry is helping
+              deliver an even better world.
+            </p>
+          </div>
+        </div>
+        <div class="update-card update-card-2">
+          <img src="./img/dhl-global-connectedness-tracker.jpeg" alt="" />
+          <div class="update">
+            <h3>global trade withstands tariff turbulance</h3>
+            <br />
+            <p>
+              The swift logistics global connectedness tracker provides a
+              comprehensive overview of te changing landscape of globalization
+              and global trade.
+            </p>
           </div>
         </div>
       </div>
     </section>
-    <!-- //////////////////end of service section////////////////// -->
+    <!-- ///////////////////////////////////////////////////////////////////
+                      END OF SERVICE SECTION 
+    ////////////////////////////////////////////////////////////////////////////////// -->
 
-    <!-- //////////////////review///////////////////////////////////// -->
-
-    <section class="review">
-      <div class="review-head">
-        <p>what our clients say</p>
-        <br /><br />
-        <h1>customer testimonials and feedback</h1>
-      </div>
-      <div class="review-center">
-        <div class="reviews">
-          <span>★★★★★</span><br />
-          <p>
-            Xpress Item Drop Store has transformed our logistics. Their rapid
-            delivery and attention to detail have significantly boosted our
-            customer satisfaction. Highly recommended!
-          </p>
-          <div class="review-pic-1"></div>
-          <p>James Smith</p>
-        </div>
-        <div class="reviews">
-          <span>★★★★★</span><br />
-          <p>
-            We greatly appreciate the excellent service from Xpress Item Drop
-            Store. They handle our inventory flawlessly and deliver on time
-            every time.
-          </p>
-          <div class="review-pic-2"></div>
-          <p>Michael Johnson</p>
-        </div>
-      </div>
-    </section>
-    <!-- ////////////////////end of review//////////////////////// -->
-
-    <!-- /////////////////////footer///////////////////////////// -->
+    <!-- ///////////////////////////////////////////////////////////////////
+                     FOOTER START 
+    ////////////////////////////////////////////////////////////////////////////////// -->
 
     <footer class="footer">
       <div class="footer-center">
@@ -288,12 +274,12 @@
           <h2>quick links</h2>
           <br />
 
-          <a href="#about.html">About</a>
+          <a href="about.html">About</a>
           <br /><br />
-          <a href="#contact.html">Contact</a>
+          <a href="contact.html">Contact</a>
           <br /><br />
-          <a href="#service.html">Services</a><br /><br />
-          <a href="#faq.html">FAQ</a>
+          <a href="3plvendor.html">Services</a><br /><br />
+          <a href="faq.html">FAQ</a>
         </div>
         <!-- //////////end of footer quicklinnks/////// -->
 
@@ -315,7 +301,7 @@
       <!-- ///////end of footer contacts////////////// -->
       <div class="main-footer">
         <div class="main-footer-left">
-          <p>Copyright &copy 2025 All rights reserved</p>
+          <p>Copyright &copy <span id="date"></span> All rights reserved</p>
         </div>
         <div class="main-footer-right"><p>Designed by | Chinomso</p></div>
       </div>

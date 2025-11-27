@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>swift courier</title>
+    <!-- style sheet -->
+    <link rel="stylesheet" href="./styles/main.css" />
+    <!-- Include Leaflet CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+
+    <style>
+      /* Define the size of the map container */
+      #mapid {
+        height: 35rem;
+        max-width: 90%;
+        margin: 0 auto;
+        z-index: 1;
+      }
+    </style>
+
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="./fontawesome-free-6.7.2-web/fontawesome-free-6.7.2-web/css/all.css"
+    />
+
+    <!-- =======javascript=========== -->
+    <!-- Include Leaflet JS (must come after the CSS link) -->
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+      defer
+    ></script>
+    <script src="./script/main.js" defer></script>
+    <!-- Include Leaflet JS -->
+
+    <!-- google fonts -->
+  </head>
+  <body>
+    <!-- ///////////////////////////////////////////////////////////////////////
+                        START OF HEAD SECTION 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <div class="header">
+      <div>
+        <a href="index.html"> <span>Swift</span><span>logistics</span></a>
+      </div>
+      <!-- //////////////// DESKTOP NAVBAR///////////// -->
+
+      <ul class="navbar">
+        <li><a href="index.html">home</a></li>
+        <li><a href="about.html">about</a></li>
+        <li><a href="merchant.html">merchant</a></li>
+        <li><a href="3plvendor.html">3pl vendor</a></li>
+        <li><a href="individuals.html">individuals</a></li>
+        <li>
+          <a href="contact.html">contact</a>
+        </li>
+      </ul>
+
+      <button id="nav-btn"><i class="fa-solid fa-bars"></i></button>
+    </div>
+
+    <!-- ///////////////// MOBILE NAVBAR//////////////////// -->
+    <nav id="in-nav">
+      <ul>
+        <li class="nav-li"><a href="index.html">home</a></li>
+        <li class="nav-li"><a href="about.html">about</a></li>
+        <li id="outer">
+          <a>services <i class="fa-solid fa-angle-down"></i></a>
+        </li>
+        <div class="inner">
+          <a href="merchant.html" class="under">For Merchants</a>
+          <a href="3plvendor.html" class="under">For 3PL vendor</a>
+          <a href="individuals.html" class="under">For Individuals</a>
+        </div>
+        <li class="nav-li">
+          <a href="contact.html">contact</a>
+        </li>
+        <li class="nav-li"><a href="track.html">track</a></li>
+      </ul>
+    </nav>
+
+    <!-- ///////////////////////////////////////////////////////////////////
+                          END OF HEAD SECTION 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+    <section class="tracking-sec">
+      <div class="track">
+        <h1 class="heading">track shipment</h1>
+        <br />
+        <p>
+          Monitor your shipment's progress in real-time, from the moment it's
+          picked up to the final delivery. <br />
+
+          <input
+            type="text"
+            placeholder="enter tracking id"
+            id="track-input"
+          /><br />
+          <button type="submit" class="tracking-btn">track</button>
+        </p>
+      </div>
+      <br />
+
+      <div id="parcel-data"></div>
+
+      <div id="mapid"></div>
+    </section>
+  </body>
+</html>

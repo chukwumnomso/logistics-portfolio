@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Leaflet Map</title>
+    <!-- Link to the Leaflet CSS stylesheet -->
+    <link
+      rel="stylesheet"
+      href="unpkg.com"
+      integrity="sha512-hoalWLoX8r4UszCkM5NWSnDlHNcB7O9jgMbg5xWO5xSBY5PIQyY9efEvcoCUJroU3rTO9kC3RSQoZ2zBYG7YqA=="
+      crossorigin=""
+    />
+    <style>
+      /* Ensure the map container has a defined size */
+      #map {
+        height: 40rem;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+
+    <!-- Link to the Leaflet JavaScript library -->
+    <script
+      src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+      integrity="sha512-BB3hKbKWH<span></span><span>pCkOxqC<span></span><span>xRbeC<span></span><span>wPNnLHNzYN<span></span><span>q+<span></span></span></span></span></span><span>n9/2yNcV+niFHjA/mOW<span></span><span>8X<span></span><span>tPqcxyKw<span></span><span>mrS<span></span></span></span></span></span><span>/</span><span>9w</span><span>z</span><span><span>4s</span>y</span><span>y</span><span><span>tQp</span>e</span><span>a</span><span><span>vF</span>h</span><span>r</span><span>/</span><span><span>S</span>N</span><span>R</span><span>v</span><span><span>P</span>k</span><span>v</span><span><span>Q</span>s</span><span>G</span><span><span>f</span>D</span><span>e</span><span>t</span><span>k</span><span><span>f</span>L</span><span>a</span><span>f</span><span>T</span><span>/</span><span>z</span><span>Q</span><span>E</span><span>s</span><span>a</span><span><span>t</span>r</span><span>l</span><span>d</span><span>/</span><span>N</span><span>f</span><span>b</span><span><span>e</span>L</span><span>a</span><span>z</span><span><span>r</span>W</span><span>1</span><span><span><span>+</span>g</span>n</span><span><span>t</span>L</span><span>G</span><span>c</span><span><span>n</span>o</span><span><span>n</span>v</span><span><span>Q</span>z</span><span>f</span><span><span>C</span>c</span><span>/</span><span>P</span><span>j</span><span><span>v</span>Q</span><span>H</span><span>a</span><span>v</span><span>T</span><span>o</span><span><span>w</span>n</span><span>J</span><span>F</span><span>e</span><span>l</span><span><span><span>+</span>o</span>R</span><span>Q</span><span>f</span><span>Q</span><span><span>+</span>d</span><span>e</span><span>B</span><span>v</span><span>d</span><span><span>y</span></span><span><span>g</span>/</span><span>p</span><span>s</span><span><span>f</span>V</span><span>q</span><span>k</span><span>+</span><span>f</span><span>m</span><span><span><span>+</span>Z</span>k</span><span>Q</span><span><span>j</span></span><span><span>+</span>g</span><span>==</span>"
+      crossorigin=""
+    ></script>
+
+    <script>
+      // Initialize the map and set the view to a specific coordinate and zoom level
+      const map = L.map("map").setView([9.082, 8.6753], 13); // Centered near Abuja, Nigeria
+
+      // Add a tile layer (the map images)
+      L.tileLayer(
+        "https://<span>{</span>s<span>}</span>.tile.openstreetmap.org<span>/</span><span>{</span>z<span>}</span><span>/</span><span>{</span>x<span>}</span><span>/</span><span>{</span>y<span>}</span>.png",
+        {
+          attribution:
+            '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+          subdomains: ["a", "b", "c"],
+        }
+      ).addTo(map);
+
+      // Add a marker to the map at the same location
+      const marker = L.marker([9.082, 8.6753]).addTo(map);
+    </script>
+  </body>
+</html>
