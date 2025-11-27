@@ -100,6 +100,8 @@ updateForm.addEventListener("submit", async (event) => {
   const expected_delivery = document.getElementById("expected_delivery").value;
   const weight = document.getElementById("weight").value;
   const description = document.getElementById("description").value;
+  const latitude = document.getElementById("latitude").value;
+  const longitude = document.getElementById("longitude").value;
 
   await updateRecord(
     tracking_number,
@@ -113,7 +115,9 @@ updateForm.addEventListener("submit", async (event) => {
     registered_date,
     expected_delivery,
     weight,
-    description
+    description,
+    latitude,
+    longitude
   );
 });
 
@@ -130,7 +134,9 @@ async function updateRecord(
   registered_date,
   expected_delivery,
   weight,
-  description
+  description,
+  latitude,
+  longitude
 ) {
   // The core Supabase update call
   const { data, error } = await Supabase.from("parcel") // The table name
@@ -146,6 +152,8 @@ async function updateRecord(
       expected_delivery: expected_delivery,
       weight: weight,
       description: description,
+      latitude: latitude,
+      longitude: longitude,
     }) // The object with updated values
     .eq("tracking_number", tracking_number); // The filter to target the specific row by its ID
   // You can add .select() here if you need the updated rows returned
