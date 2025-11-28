@@ -180,7 +180,7 @@ if (deleteButton) {
       console.error(error);
     } else {
       console.log("Deleted successfully.");
-      trackingNumber = "";
+      document.getElementById("track-input").value = "";
     }
   });
 }
