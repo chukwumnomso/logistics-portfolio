@@ -154,7 +154,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // /////////////////////////////////////////////////////////////////////////////////START OF TRACKING//////////////////////////////////////
 
-const supabase = window.supabase.createClient(
+const Supabase = window.supabase.createClient(
   "https://wzsflsxaiehjwsrpzpkk.supabase.co",
   "sb_publishable_XRYGu9FydFzQ8xsCQb1dtg_lnF2XZu_"
 );
@@ -167,12 +167,8 @@ if (trackingBtn) {
       const parcelData = document.getElementById("parcel-data");
       const track = document.querySelector(".track");
       const trackingNumber = document.getElementById("track-input").value;
-      if (trackingNumber === 200496) {
-        window.location.href = "http://127.0.0.1:5500/faq.html";
-      }
 
-      const { data: parcel, error } = await supabase
-        .from("parcel")
+      const { data: parcel, error } = await Supabase.from("parcel")
         .select("*")
         .eq("tracking_number", trackingNumber)
         .single();
@@ -261,8 +257,7 @@ let trackingMarker = null;
 
 async function updateMarkerByTrackingId(trackingNumber) {
   //  Fetchong data for the specific tracking number
-  const { data: parcel, error } = await supabase
-    .from("parcel")
+  const { data: parcel, error } = await Supabase.from("parcel")
     .select("latitude, longitude,current_location,status")
     .eq("tracking_number", trackingNumber)
     .single();
@@ -314,4 +309,3 @@ async function updateMarkerByTrackingId(trackingNumber) {
 
 // updateMarkerByTrackingId(67890);
 // ////////////////////// MAP INTERGRATION END/////////////////////////////
-
